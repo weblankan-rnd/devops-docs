@@ -32,10 +32,10 @@ nav:
     - Optimized .htaccess (Apache): infrastructure/htaccess-optimized.md
   - Hosting:
     - Logins: accounts/aws.md
-    
+
   - Useful Links:
     - Overview: useful-links/index.md
-    - Live Logins: https://docs.google.com/spreadsheets/d/1tfJq1414u3qUI4p-iugevAZUM2CC3CFhQPTzzxtLB_M/edit?gid=0#gid=0
+    - Wordpress Logins: https://docs.google.com/spreadsheets/d/1tfJq1414u3qUI4p-iugevAZUM2CC3CFhQPTzzxtLB_M/edit?gid=0#gid=0
 
   - Actions:  
     - Wordpress: tools/github-actions.md
