@@ -1,0 +1,1699 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Comprehensive DevOps processes, tools, and procedures documentation">
+      
+      
+        <meta name="author" content="DevOps Team">
+      
+      
+      
+        <link rel="prev" href="../../infrastructure/cloud-platform/">
+      
+      
+        <link rel="next" href="../../monitoring/metrics/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>WordPress Theme Deployment - Company DevOps Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#wordpress-theme-push-to-test-server" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Company DevOps Documentation" class="md-header__button md-logo" aria-label="Company DevOps Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Company DevOps Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              WordPress Theme Deployment
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Company DevOps Documentation" class="md-nav__button md-logo" aria-label="Company DevOps Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Company DevOps Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../processes/release-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WordPress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infrastructure/cloud-platform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hosting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Actions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    GitHub Actions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WordPress Theme Deployment
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WordPress Theme Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow File
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-github-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required GitHub Secrets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required GitHub Secrets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ssh_private_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. SSH_PRIVATE_KEY
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ssh_host" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. SSH_HOST
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-ssh_user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. SSH_USER
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-sonar_token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. SONAR_TOKEN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-sonar_host_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. SONAR_HOST_URL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow Jobs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workflow Jobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sonarqube-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. SonarQube Scan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-deploy-to-test-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Deploy to Test Server
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trigger-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trigger Events
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-in-new-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Use in New Repository
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Use in New Repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-workflow-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Create Workflow File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-update-environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Update Environment Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-add-ssh-keys-to-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Add SSH Keys to Secrets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-add-other-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Add Other Secrets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-steps-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow Steps Explained
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workflow Steps Explained">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-checkout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Checkout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sonarqube-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. SonarQube Scan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-setup-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Setup SSH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-known-hosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Known Hosts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-clone-or-pull" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Clone or Pull
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment Process
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh-connection-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSH Connection Failed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission-denied" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permission Denied
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theme-not-updating" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theme Not Updating
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sonarqube-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SonarQube Failures
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-configuration-for-new-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Configuration for New Theme
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monitoring/metrics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emails
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow File
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-github-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required GitHub Secrets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required GitHub Secrets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ssh_private_key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. SSH_PRIVATE_KEY
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ssh_host" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. SSH_HOST
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-ssh_user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. SSH_USER
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-sonar_token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. SONAR_TOKEN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-sonar_host_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. SONAR_HOST_URL
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow Jobs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workflow Jobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sonarqube-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. SonarQube Scan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-deploy-to-test-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Deploy to Test Server
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trigger-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trigger Events
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-in-new-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Use in New Repository
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Use in New Repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-workflow-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Create Workflow File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-update-environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Update Environment Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-add-ssh-keys-to-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Add SSH Keys to Secrets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-add-other-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Add Other Secrets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-steps-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow Steps Explained
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workflow Steps Explained">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-checkout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Checkout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sonarqube-scan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. SonarQube Scan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-setup-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Setup SSH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-known-hosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Known Hosts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-clone-or-pull" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Clone or Pull
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment Process
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh-connection-failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSH Connection Failed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission-denied" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permission Denied
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theme-not-updating" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theme Not Updating
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sonarqube-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SonarQube Failures
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-configuration-for-new-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example Configuration for New Theme
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="wordpress-theme-push-to-test-server">WordPress Theme Push to Test Server<a class="headerlink" href="#wordpress-theme-push-to-test-server" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>This GitHub Actions workflow automatically deploys WordPress theme changes to a test server using CloudPanel deployer when code is pushed to the staging branch.</p>
+<h2 id="workflow-file">Workflow File<a class="headerlink" href="#workflow-file" title="Permanent link">&para;</a></h2>
+<p>Save this as <code>.github/workflows/deploy-test-server.yml</code> in your repository:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy-test-server</span>
+
+<span class="c1"># dialog cloudpanel deployer !</span>
+
+<span class="nt">env</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">THEME_FOLDER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">adventure_git</span>
+<span class="w">  </span><span class="nt">TARGET_DIR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/home/adventureteams/htdocs/adventureteams.hostweblankan.in</span>
+<span class="w">  </span><span class="nt">THEME_PATH</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wp-content/themes</span>
+<span class="w">  </span><span class="nt">PERMISSIONS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">adventureteams</span>
+
+<span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">staging</span>
+<span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">staging</span>
+<span class="w">  </span><span class="nt">workflow_dispatch</span><span class="p">:</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+
+<span class="w">  </span><span class="nt">sonarqube-scan</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sonarqube-scan</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sonarsource/sonarqube-scan-action@master</span>
+<span class="w">        </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">SONAR_TOKEN</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.SONAR_TOKEN }}</span>
+<span class="w">          </span><span class="nt">SONAR_HOST_URL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.SONAR_HOST_URL }}</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sonarsource/sonarqube-quality-gate-action@master</span>
+<span class="w">        </span><span class="nt">timeout-minutes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">        </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">SONAR_TOKEN</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.SONAR_TOKEN }}</span>
+
+<span class="w">  </span><span class="nt">deploy-to-test</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sonarqube-scan</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout repository</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Setup SSH private key</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">mkdir -p ~/.ssh</span>
+<span class="w">          </span><span class="no">echo &quot;${{ secrets.SSH_PRIVATE_KEY }}&quot; &gt; ~/.ssh/id_rsa</span>
+<span class="w">          </span><span class="no">chmod 600 ~/.ssh/id_rsa</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Add GitHub and server to known hosts</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">ssh-keyscan -H ${{ secrets.SSH_HOST }} &gt;&gt; ~/.ssh/known_hosts</span>
+<span class="w">          </span><span class="no">ssh-keyscan -H github.com &gt;&gt; ~/.ssh/known_hosts</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Clone or Pull latest code</span>
+<span class="w">        </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">BRANCH</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.ref_name }}</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} &quot;</span>
+<span class="w">            </span><span class="no">set -e</span>
+
+<span class="w">            </span><span class="no">echo &#39;Target directory: ${{ env.TARGET_DIR }}/${{ env.THEME_PATH }}/${{ env.THEME_FOLDER }}&#39;</span>
+<span class="w">            </span><span class="no">echo &#39;Branch: $BRANCH&#39;</span>
+
+<span class="w">            </span><span class="no">git config --global --add safe.directory \&quot;${{ env.TARGET_DIR }}/${{ env.THEME_PATH }}/${{ env.THEME_FOLDER }}\&quot;</span>
+
+<span class="w">            </span><span class="no">mkdir -p ~/.ssh</span>
+<span class="w">            </span><span class="no">echo &#39;${{ secrets.SSH_PRIVATE_KEY }}&#39; &gt; ~/.ssh/id_rsa</span>
+<span class="w">            </span><span class="no">chmod 600 ~/.ssh/id_rsa</span>
+<span class="w">            </span><span class="no">ssh-keyscan -H github.com &gt;&gt; ~/.ssh/known_hosts</span>
+
+<span class="w">            </span><span class="no">if [ -d \&quot;${{ env.TARGET_DIR }}/${{ env.THEME_PATH }}/${{ env.THEME_FOLDER }}/.git\&quot; ]; then</span>
+<span class="w">              </span><span class="no">echo &#39;Repository exists. Pulling latest changes...&#39;</span>
+<span class="w">              </span><span class="no">cd \&quot;${{ env.TARGET_DIR }}/${{ env.THEME_PATH }}/${{ env.THEME_FOLDER }}\&quot;</span>
+<span class="w">              </span><span class="no">git fetch origin</span>
+<span class="w">              </span><span class="no">git checkout \&quot;$BRANCH\&quot; || git checkout -b \&quot;$BRANCH\&quot; origin/\&quot;$BRANCH\&quot;</span>
+<span class="w">              </span><span class="no">git reset --hard origin/\&quot;$BRANCH\&quot;</span>
+<span class="w">            </span><span class="no">else</span>
+<span class="w">              </span><span class="no">echo &#39;Cloning repository...&#39;</span>
+<span class="w">              </span><span class="no">rm -rf \&quot;${{ env.TARGET_DIR }}/${{ env.THEME_PATH }}/${{ env.THEME_FOLDER }}\&quot;</span>
+<span class="w">              </span><span class="no">mkdir -p \&quot;${{ env.TARGET_DIR }}/${{ env.THEME_PATH }}/${{ env.THEME_FOLDER }}\&quot;</span>
+<span class="w">              </span><span class="no">GIT_SSH_COMMAND=\&quot;ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no\&quot; \</span>
+<span class="w">                </span><span class="no">git clone -b \&quot;$BRANCH\&quot; git@github.com:${{ github.repository }} \</span>
+<span class="w">                </span><span class="no">\&quot;${{ env.TARGET_DIR }}/${{ env.THEME_PATH }}/${{ env.THEME_FOLDER }}\&quot;</span>
+<span class="w">            </span><span class="no">fi</span>
+
+<span class="w">            </span><span class="no">echo &#39;Changing ownership...&#39;</span>
+<span class="w">            </span><span class="no">chown -R ${{ env.PERMISSIONS }}:${{ env.PERMISSIONS }} \</span>
+<span class="w">              </span><span class="no">\&quot;${{ env.TARGET_DIR }}/${{ env.THEME_PATH }}/${{ env.THEME_FOLDER }}\&quot;</span>
+
+<span class="w">            </span><span class="no">echo &#39;Deployment completed successfully.&#39;</span>
+<span class="w">          </span><span class="no">&quot;</span>
+</code></pre></div>
+<h2 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h2>
+<p>These variables need to be customized for each repository:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">THEME_FOLDER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">adventure_git</span><span class="w">              </span><span class="c1"># Name of your theme folder</span>
+<span class="nt">TARGET_DIR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/home/adventureteams/htdocs/adventureteams.hostweblankan.in</span>
+<span class="nt">THEME_PATH</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wp-content/themes</span><span class="w">            </span><span class="c1"># WordPress theme path</span>
+<span class="nt">PERMISSIONS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">adventureteams</span><span class="w">              </span><span class="c1"># Server user permission</span>
+</code></pre></div>
+<h2 id="required-github-secrets">Required GitHub Secrets<a class="headerlink" href="#required-github-secrets" title="Permanent link">&para;</a></h2>
+<p>Add these secrets to your GitHub repository settings (<code>Settings → Secrets and variables → Actions</code>):</p>
+<h3 id="1-ssh_private_key">1. SSH_PRIVATE_KEY<a class="headerlink" href="#1-ssh_private_key" title="Permanent link">&para;</a></h3>
+<p>Your SSH private key for server authentication
+<div class="highlight"><pre><span></span><code>- Go to Settings → Secrets and variables → Actions
+- Click &quot;New repository secret&quot;
+- Name: SSH_PRIVATE_KEY
+- Value: Paste your private SSH key (entire key including -----BEGIN and -----END lines)
+</code></pre></div></p>
+<h3 id="2-ssh_host">2. SSH_HOST<a class="headerlink" href="#2-ssh_host" title="Permanent link">&para;</a></h3>
+<p>Your server hostname or IP address
+<div class="highlight"><pre><span></span><code>Name: SSH_HOST
+Value: adventureteams.hostweblankan.in (or your server IP)
+</code></pre></div></p>
+<h3 id="3-ssh_user">3. SSH_USER<a class="headerlink" href="#3-ssh_user" title="Permanent link">&para;</a></h3>
+<p>Your SSH username
+<div class="highlight"><pre><span></span><code>Name: SSH_USER
+Value: adventureteams (or your server username)
+</code></pre></div></p>
+<h3 id="4-sonar_token">4. SONAR_TOKEN<a class="headerlink" href="#4-sonar_token" title="Permanent link">&para;</a></h3>
+<p>SonarQube authentication token (for code quality scanning)
+<div class="highlight"><pre><span></span><code>Name: SONAR_TOKEN
+Value: Your SonarQube token
+</code></pre></div></p>
+<h3 id="5-sonar_host_url">5. SONAR_HOST_URL<a class="headerlink" href="#5-sonar_host_url" title="Permanent link">&para;</a></h3>
+<p>SonarQube server URL
+<div class="highlight"><pre><span></span><code>Name: SONAR_HOST_URL
+Value: https://sonarqube.yourserver.com (or your SonarQube URL)
+</code></pre></div></p>
+<h2 id="workflow-jobs">Workflow Jobs<a class="headerlink" href="#workflow-jobs" title="Permanent link">&para;</a></h2>
+<h3 id="1-sonarqube-scan">1. SonarQube Scan<a class="headerlink" href="#1-sonarqube-scan" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Performs code quality analysis</li>
+<li>Must pass before deployment proceeds</li>
+<li>Checks for bugs, vulnerabilities, and code smells</li>
+</ul>
+<h3 id="2-deploy-to-test-server">2. Deploy to Test Server<a class="headerlink" href="#2-deploy-to-test-server" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Runs only after SonarQube scan passes</li>
+<li>Clones or pulls latest code from GitHub</li>
+<li>Sets proper file permissions</li>
+<li>Completes deployment to test server</li>
+</ul>
+<h2 id="trigger-events">Trigger Events<a class="headerlink" href="#trigger-events" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Push to staging branch</strong> - Automatically deploys on push</li>
+<li><strong>Pull request to staging branch</strong> - Validates before merge</li>
+<li><strong>Manual trigger</strong> - Can be run manually via workflow_dispatch</li>
+</ul>
+<h2 id="how-to-use-in-new-repository">How to Use in New Repository<a class="headerlink" href="#how-to-use-in-new-repository" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-create-workflow-file">Step 1: Create Workflow File<a class="headerlink" href="#step-1-create-workflow-file" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Go to your repository</li>
+<li>Create <code>.github/workflows/</code> directory if it doesn't exist</li>
+<li>Create new file: <code>deploy-test-server.yml</code></li>
+<li>Copy the entire workflow file above into this file</li>
+</ol>
+<h3 id="step-2-update-environment-variables">Step 2: Update Environment Variables<a class="headerlink" href="#step-2-update-environment-variables" title="Permanent link">&para;</a></h3>
+<p>Replace these values with your own:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">env</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">THEME_FOLDER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_theme_name</span><span class="w">          </span><span class="c1"># Change to your theme folder</span>
+<span class="w">  </span><span class="nt">TARGET_DIR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/home/youruser/htdocs/your-domain.com</span>
+<span class="w">  </span><span class="nt">THEME_PATH</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wp-content/themes</span>
+<span class="w">  </span><span class="nt">PERMISSIONS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">youruser</span><span class="w">                  </span><span class="c1"># Your server username</span>
+</code></pre></div>
+<h3 id="step-3-add-ssh-keys-to-secrets">Step 3: Add SSH Keys to Secrets<a class="headerlink" href="#step-3-add-ssh-keys-to-secrets" title="Permanent link">&para;</a></h3>
+<p><strong>Generate SSH Key Pair</strong> (if you don't have one):</p>
+<div class="highlight"><pre><span></span><code>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-b<span class="w"> </span><span class="m">4096</span><span class="w"> </span>-f<span class="w"> </span>~/.ssh/github_deploy
+<span class="c1"># Press enter for passphrase (leave empty for automation)</span>
+</code></pre></div>
+<p><strong>Add Public Key to Server</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># On your server</span>
+cat<span class="w"> </span>~/.ssh/github_deploy.pub<span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.ssh/authorized_keys
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/authorized_keys
+</code></pre></div>
+<p><strong>Add Private Key to GitHub Secrets</strong>:</p>
+<ol>
+<li>
+<p>Copy entire private key content:
+   <div class="highlight"><pre><span></span><code>cat<span class="w"> </span>~/.ssh/github_deploy
+</code></pre></div></p>
+</li>
+<li>
+<p>Go to GitHub repo → Settings → Secrets and variables → Actions</p>
+</li>
+<li>
+<p>Click "New repository secret"</p>
+</li>
+<li>
+<p>Name: <code>SSH_PRIVATE_KEY</code></p>
+</li>
+<li>
+<p>Value: Paste the entire private key (including BEGIN and END lines)</p>
+</li>
+</ol>
+<h3 id="step-4-add-other-secrets">Step 4: Add Other Secrets<a class="headerlink" href="#step-4-add-other-secrets" title="Permanent link">&para;</a></h3>
+<p>In GitHub repo settings, add these secrets:</p>
+<table>
+<thead>
+<tr>
+<th>Secret Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SSH_HOST</td>
+<td>your-server.com or IP address</td>
+</tr>
+<tr>
+<td>SSH_USER</td>
+<td>your-server-username</td>
+</tr>
+<tr>
+<td>SONAR_TOKEN</td>
+<td>Your SonarQube token</td>
+</tr>
+<tr>
+<td>SONAR_HOST_URL</td>
+<td>Your SonarQube server URL</td>
+</tr>
+</tbody>
+</table>
+<h2 id="workflow-steps-explained">Workflow Steps Explained<a class="headerlink" href="#workflow-steps-explained" title="Permanent link">&para;</a></h2>
+<h3 id="1-checkout">1. Checkout<a class="headerlink" href="#1-checkout" title="Permanent link">&para;</a></h3>
+<p>Pulls your repository code</p>
+<h3 id="2-sonarqube-scan">2. SonarQube Scan<a class="headerlink" href="#2-sonarqube-scan" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Analyzes code quality</li>
+<li>Must pass before deployment</li>
+<li>Detects bugs and vulnerabilities</li>
+</ul>
+<h3 id="3-setup-ssh">3. Setup SSH<a class="headerlink" href="#3-setup-ssh" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Creates SSH directory</li>
+<li>Adds private key with proper permissions (600)</li>
+</ul>
+<h3 id="4-known-hosts">4. Known Hosts<a class="headerlink" href="#4-known-hosts" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Adds GitHub and server to trusted hosts</li>
+<li>Prevents SSH authentication prompts</li>
+</ul>
+<h3 id="5-clone-or-pull">5. Clone or Pull<a class="headerlink" href="#5-clone-or-pull" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Checks if theme exists on server</li>
+<li>If exists: pulls latest changes from branch</li>
+<li>If new: clones repository</li>
+<li>Changes ownership to specified user</li>
+</ul>
+<h2 id="deployment-process">Deployment Process<a class="headerlink" href="#deployment-process" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Developer pushes code to <code>staging</code> branch</li>
+<li>GitHub Actions triggers workflow</li>
+<li>SonarQube analyzes code</li>
+<li>If quality gate passes:</li>
+<li>SSH connects to server</li>
+<li>Clones or pulls latest code</li>
+<li>Sets permissions</li>
+<li>Deployment completes</li>
+<li>If quality gate fails:</li>
+<li>Deployment stops</li>
+<li>Developer must fix issues</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="ssh-connection-failed">SSH Connection Failed<a class="headerlink" href="#ssh-connection-failed" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Verify SSH_HOST, SSH_USER, SSH_PRIVATE_KEY secrets</li>
+<li>Check if server has public key authorized</li>
+<li>Test SSH manually: <code>ssh user@host</code></li>
+</ul>
+<h3 id="permission-denied">Permission Denied<a class="headerlink" href="#permission-denied" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ensure PERMISSIONS variable matches server username</li>
+<li>Verify SSH key has proper permissions on server</li>
+<li>Check authorized_keys format</li>
+</ul>
+<h3 id="theme-not-updating">Theme Not Updating<a class="headerlink" href="#theme-not-updating" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Check if branch name is correct</li>
+<li>Verify Git credentials in SSH key</li>
+<li>Review GitHub Actions logs for errors</li>
+</ul>
+<h3 id="sonarqube-failures">SonarQube Failures<a class="headerlink" href="#sonarqube-failures" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fix code quality issues locally</li>
+<li>Re-push to staging branch</li>
+<li>Workflow will retry automatically</li>
+</ul>
+<h2 id="example-configuration-for-new-theme">Example Configuration for New Theme<a class="headerlink" href="#example-configuration-for-new-theme" title="Permanent link">&para;</a></h2>
+<p>For a new theme called <code>my_awesome_theme</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">env</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">THEME_FOLDER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_awesome_theme</span>
+<span class="w">  </span><span class="nt">TARGET_DIR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/home/webuser/htdocs/mysite.com</span>
+<span class="w">  </span><span class="nt">THEME_PATH</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wp-content/themes</span>
+<span class="w">  </span><span class="nt">PERMISSIONS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">webuser</span>
+</code></pre></div>
+<p>Then add secrets:
+- SSH_PRIVATE_KEY: (your private SSH key)
+- SSH_HOST: mysite.com
+- SSH_USER: webuser
+- SONAR_TOKEN: (your token)
+- SONAR_HOST_URL: https://sonarqube.yourserver.com</p>
+<h2 id="security-best-practices">Security Best Practices<a class="headerlink" href="#security-best-practices" title="Permanent link">&para;</a></h2>
+<p>✅ <strong>Keep SSH key secure</strong> - Never commit to repository<br />
+✅ <strong>Use strong SSH key</strong> - 4096-bit RSA minimum<br />
+✅ <strong>Restrict permissions</strong> - Only authorized users deploy<br />
+✅ <strong>Monitor deployments</strong> - Review workflow runs<br />
+✅ <strong>Rotate keys regularly</strong> - Change SSH keys periodically<br />
+✅ <strong>Use branch protection</strong> - Prevent direct pushes to main  </p>
+<h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
+<p>For issues or questions, contact your DevOps team or refer to GitHub Actions documentation.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Company
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "search.suggest", "search.highlight", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
