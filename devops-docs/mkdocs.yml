@@ -1,17 +1,19 @@
-site_name: Company DevOps Documentation
-site_description: Comprehensive DevOps processes, tools, and procedures documentation
-site_author: DevOps Team
-copyright: "Copyright &copy; 2025 Company"
+site_name: Web Lankan Docs
+site_description: Comprehensive documentation for Web Lankan
+site_author: Web Lankan Team
+copyright: "Copyright &copy; 2025 Web Lankan"
 
 theme:
   name: material
   palette:
     - scheme: default
-      primary: blue
-      accent: blue
+      primary: indigo
+      accent: indigo
   features:
     - navigation.instant
     - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
     - search.suggest
     - search.highlight
     - toc.follow
@@ -22,12 +24,33 @@ plugins:
 
 nav:
   - Home: index.md
-  - WordPress: processes/release-management.md
-  - Software: tools/docker.md
-  - Hosting: infrastructure/cloud-platform.md
-  - GitHub Actions:
+  - Emails:
+    - Overview: monitoring/metrics.md
+    - Email Configuration: monitoring/logs.md
+    - Email Alerts: monitoring/alerts.md
+  - Webservers:
+    - Nginx Reverse Proxy: infrastructure/nginx-cloudflare.md
+    - Nginx with Let's Encrypt SSL: infrastructure/nginx-letsencrypt.md
+    - Optimized .htaccess (Apache): infrastructure/htaccess-optimized.md
+  - Hosting:
+    - Cloud Platform: infrastructure/cloud-platform.md
+    - Storage & Backups: infrastructure/storage.md
+    - Databases: infrastructure/databases.md
+    - Network: infrastructure/network.md
+  - Actions:
+    - GitHub Actions Overview: tools/github-actions.md
     - WordPress Theme Deployment: tools/github-actions.md
-  - Emails: monitoring/metrics.md
+    - Deployment Strategies:
+      - Blue Green: deployment/blue-green.md
+      - Canary: deployment/canary.md
+      - Rolling: deployment/rolling.md
+      - Shadow: deployment/shadow.md
+    - CI/CD Tools:
+      - Docker: tools/docker.md
+      - Kubernetes: tools/kubernetes.md
+      - Terraform: tools/terraform.md
+      - Ansible: tools/ansible.md
+      - Jenkins: tools/jenkins.md
 
 markdown_extensions:
   - admonition
