@@ -1,1 +1,39 @@
-site_name: My Docs
+site_name: Company DevOps Documentation
+site_description: Comprehensive DevOps processes, tools, and procedures documentation
+site_author: DevOps Team
+copyright: "Copyright &copy; 2025 Company"
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+  features:
+    - navigation.instant
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+    - toc.follow
+    - content.code.copy
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - WordPress: processes/release-management.md
+  - Software: tools/docker.md
+  - Hosting: infrastructure/cloud-platform.md
+  - GitHub Actions:
+    - WordPress Theme Deployment: tools/github-actions.md
+  - Emails: monitoring/metrics.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - tables
+  - toc:
+      permalink: true
