@@ -36,7 +36,9 @@ nav:
     - Overview: useful-links/index.md
     - Live Logins: https://docs.google.com/spreadsheets/d/1tfJq1414u3qUI4p-iugevAZUM2CC3CFhQPTzzxtLB_M/edit?gid=0#gid=0
   - Actions:
-    - GitHub Actions Overview: tools/github-actions.md
+    - Wordpress: tools/github-actions.md
+    - Nextjs: tools/nextjs-actions.md
+    - Software: tools/software-actions.md
 
 markdown_extensions:
   - admonition
