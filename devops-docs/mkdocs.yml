@@ -26,31 +26,17 @@ nav:
   - Home: index.md
   - Emails:
     - Overview: monitoring/metrics.md
-    - Email Configuration: monitoring/logs.md
-    - Email Alerts: monitoring/alerts.md
   - Webservers:
     - Nginx Reverse Proxy: infrastructure/nginx-cloudflare.md
     - Nginx with Let's Encrypt SSL: infrastructure/nginx-letsencrypt.md
     - Optimized .htaccess (Apache): infrastructure/htaccess-optimized.md
   - Hosting:
-    - Cloud Platform: infrastructure/cloud-platform.md
     - Storage & Backups: infrastructure/storage.md
-    - Databases: infrastructure/databases.md
-    - Network: infrastructure/network.md
+  - Useful Links:
+    - Overview: useful-links/index.md
+    - Live Logins: https://docs.google.com/spreadsheets/d/1tfJq1414u3qUI4p-iugevAZUM2CC3CFhQPTzzxtLB_M/edit?gid=0#gid=0
   - Actions:
     - GitHub Actions Overview: tools/github-actions.md
-    - WordPress Theme Deployment: tools/github-actions.md
-    - Deployment Strategies:
-      - Blue Green: deployment/blue-green.md
-      - Canary: deployment/canary.md
-      - Rolling: deployment/rolling.md
-      - Shadow: deployment/shadow.md
-    - CI/CD Tools:
-      - Docker: tools/docker.md
-      - Kubernetes: tools/kubernetes.md
-      - Terraform: tools/terraform.md
-      - Ansible: tools/ansible.md
-      - Jenkins: tools/jenkins.md
 
 markdown_extensions:
   - admonition
