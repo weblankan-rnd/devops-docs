@@ -13,6 +13,10 @@
       
       
       
+        <link rel="prev" href="../../infrastructure/htaccess-optimized/">
+      
+      
+        <link rel="next" href="../../useful-links/">
       
       
         
@@ -23,7 +27,7 @@
     
     
       
-        <title>Canary Deployment - Web Lankan Docs</title>
+        <title>Logins - Web Lankan Docs</title>
       
     
     
@@ -74,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#canary-deployment" class="md-skip">
+        <a href="#aws-accounts" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Canary Deployment
+              Logins
             
           </span>
         </div>
@@ -248,11 +252,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../accounts/aws/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -604,26 +610,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
@@ -641,7 +652,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -656,10 +667,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../accounts/aws/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -675,6 +695,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -965,219 +986,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Overview
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advantages" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Advantages
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#disadvantages" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Disadvantages
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deployment-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Deployment Process
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Deployment Process">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-prepare-canary-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Prepare Canary Environment
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-initial-canary-phase" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Initial Canary Phase
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-gradual-rollout" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Gradual Rollout
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-complete-rollout" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Complete Rollout
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-rollback-if-needed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Rollback (if needed)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#traffic-routing-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Traffic Routing Configuration
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Traffic Routing Configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#service-mesh-istio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Service Mesh (Istio)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#metrics-to-monitor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Metrics to Monitor
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#decision-criteria" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Decision Criteria
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Decision Criteria">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#proceed-to-next-phase" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Proceed to Next Phase
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rollback" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rollback
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#timeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Timeline
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Best Practices
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1193,126 +1001,52 @@
 
 
 
-<h1 id="canary-deployment">Canary Deployment<a class="headerlink" href="#canary-deployment" title="Permanent link">&para;</a></h1>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>Canary deployment gradually rolls out a new version to a subset of users before releasing to everyone. This strategy allows testing in production with minimal risk.</p>
-<h2 id="advantages">Advantages<a class="headerlink" href="#advantages" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Real user testing before full rollout</li>
-<li>Gradual traffic shift</li>
-<li>Low impact rollback</li>
-<li>Performance testing in production</li>
-<li>Early issue detection</li>
-</ul>
-<h2 id="disadvantages">Disadvantages<a class="headerlink" href="#disadvantages" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Longer deployment timeline</li>
-<li>Complex traffic routing</li>
-<li>Requires monitoring expertise</li>
-<li>Testing across versions</li>
-<li>Database migration complexity</li>
-</ul>
-<h2 id="deployment-process">Deployment Process<a class="headerlink" href="#deployment-process" title="Permanent link">&para;</a></h2>
-<h3 id="1-prepare-canary-environment">1. Prepare Canary Environment<a class="headerlink" href="#1-prepare-canary-environment" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>□ Deploy new version alongside stable
-□ Route small percentage of traffic (5-10%)
-□ Monitor metrics closely
-□ Run continuous tests
-</code></pre></div>
-<h3 id="2-initial-canary-phase">2. Initial Canary Phase<a class="headerlink" href="#2-initial-canary-phase" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>Traffic distribution:
-- Stable version: 95%
-- Canary version: 5%
-
-Monitor for 30 minutes:
-□ Error rates
-□ Response times
-□ Resource utilization
-□ User metrics
-</code></pre></div>
-<h3 id="3-gradual-rollout">3. Gradual Rollout<a class="headerlink" href="#3-gradual-rollout" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>Increase traffic in stages:
-Phase 1: 5% canary → 10% canary
-Phase 2: 10% canary → 25% canary
-Phase 3: 25% canary → 50% canary
-Phase 4: 50% canary → 100% canary
-
-Each phase: Monitor for 30 minutes
-</code></pre></div>
-<h3 id="4-complete-rollout">4. Complete Rollout<a class="headerlink" href="#4-complete-rollout" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>□ All traffic on new version
-□ Remove canary infrastructure
-□ Archive canary logs
-□ Document results
-</code></pre></div>
-<h3 id="5-rollback-if-needed">5. Rollback (if needed)<a class="headerlink" href="#5-rollback-if-needed" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>□ Identify issue
-□ Immediately shift traffic back to stable
-□ Investigate root cause
-□ Plan remediation
-</code></pre></div>
-<h2 id="traffic-routing-configuration">Traffic Routing Configuration<a class="headerlink" href="#traffic-routing-configuration" title="Permanent link">&para;</a></h2>
-<h3 id="service-mesh-istio">Service Mesh (Istio)<a class="headerlink" href="#service-mesh-istio" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.istio.io/v1beta1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VirtualService</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapp</span>
-<span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">hosts</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapp</span>
-<span class="w">  </span><span class="nt">http</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">match</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uri</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/&quot;</span>
-<span class="w">    </span><span class="nt">route</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">destination</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapp-stable</span>
-<span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">95</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">destination</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapp-canary</span>
-<span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
-</code></pre></div>
-<h2 id="metrics-to-monitor">Metrics to Monitor<a class="headerlink" href="#metrics-to-monitor" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Error Rate</strong>: Should not increase</li>
-<li><strong>Response Time</strong>: Should not degrade</li>
-<li><strong>CPU/Memory</strong>: Compare with stable</li>
-<li><strong>Business Metrics</strong>: User engagement</li>
-<li><strong>Exception Rates</strong>: New issues</li>
-</ul>
-<h2 id="decision-criteria">Decision Criteria<a class="headerlink" href="#decision-criteria" title="Permanent link">&para;</a></h2>
-<h3 id="proceed-to-next-phase">Proceed to Next Phase<a class="headerlink" href="#proceed-to-next-phase" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Error rate stable or decreasing</li>
-<li>Response time acceptable</li>
-<li>No new exceptions</li>
-<li>User engagement positive</li>
-</ul>
-<h3 id="rollback">Rollback<a class="headerlink" href="#rollback" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Error rate increases &gt; 2x</li>
-<li>Response time increases &gt; 10%</li>
-<li>Critical exceptions detected</li>
-<li>User complaints increase</li>
-</ul>
-<h2 id="timeline">Timeline<a class="headerlink" href="#timeline" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Canary setup: 5-10 minutes</li>
-<li>Initial phase: 30 minutes</li>
-<li>Phase 2: 30 minutes</li>
-<li>Phase 3: 30 minutes</li>
-<li>Phase 4: 30 minutes</li>
-<li><strong>Total: 2-2.5 hours</strong></li>
-</ul>
-<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>Start small</strong> - 5% traffic initially</li>
-<li><strong>Monitor everything</strong> - Watch all metrics</li>
-<li><strong>Automated rollback</strong> - Quick response to issues</li>
-<li><strong>Clear metrics</strong> - Know when to proceed/rollback</li>
-<li><strong>Communication</strong> - Keep team informed</li>
-<li><strong>Documentation</strong> - Record all decisions</li>
-</ol>
+<h1 id="aws-accounts">AWS Accounts<a class="headerlink" href="#aws-accounts" title="Permanent link">&para;</a></h1>
+<p>Central list of accounts with direct console links.</p>
+<table>
+<thead>
+<tr>
+<th>Account Name</th>
+<th>Purpose</th>
+<th>Login</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IIT AWS</td>
+<td>production</td>
+<td><a href="https://061859757629.signin.aws.amazon.com/console">Login</a></td>
+</tr>
+<tr>
+<td>Ceylone Steel AWS</td>
+<td>production</td>
+<td><a href="https://177199582808.signin.aws.amazon.com/console">Login</a></td>
+</tr>
+<tr>
+<td>Janitha WL AWS</td>
+<td>Test Server</td>
+<td><a href="https://196856295346.signin.aws.amazon.com/console">Login</a></td>
+</tr>
+<tr>
+<td>Lanka Hospitals AWS</td>
+<td>production</td>
+<td><a href="https://791169429240.signin.aws.amazon.com/console">Login</a></td>
+</tr>
+<tr>
+<td>Uptime</td>
+<td>Monitoring</td>
+<td><a href="https://uptime.hostweblankan.in/dashboard">Login</a></td>
+</tr>
+<tr>
+<td>Passbolt</td>
+<td>Password Manage</td>
+<td><a href="https://vault.hostweblankan.in/">Login</a></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Keep MFA enforced and avoid sharing root credentials. Use IAM users/roles and short-lived tokens.</p>
+</blockquote>
 
 
 

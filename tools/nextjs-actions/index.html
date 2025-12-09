@@ -13,6 +13,10 @@
       
       
       
+        <link rel="prev" href="../github-actions/">
+      
+      
+        <link rel="next" href="../software-actions/">
       
       
         
@@ -23,7 +27,7 @@
     
     
       
-        <title>Canary Deployment - Web Lankan Docs</title>
+        <title>Nextjs - Web Lankan Docs</title>
       
     
     
@@ -74,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#canary-deployment" class="md-skip">
+        <a href="#nextjs-deployment-docker-ghcr-ssh" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Canary Deployment
+              Nextjs
             
           </span>
         </div>
@@ -288,11 +292,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../tools/github-actions/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../github-actions/" class="md-tabs__link">
           
   
   
@@ -806,26 +812,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   
@@ -843,7 +854,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -861,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/github-actions/" class="md-nav__link">
+      <a href="../github-actions/" class="md-nav__link">
         
   
   
@@ -886,10 +897,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../tools/nextjs-actions/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nextjs
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -905,6 +943,81 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required Secrets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optionalconfigurable-env-values-in-the-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional/Configurable env values in the workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow YAML
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-deploy-with-this-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to deploy with this action
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -917,7 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/software-actions/" class="md-nav__link">
+      <a href="../software-actions/" class="md-nav__link">
         
   
   
@@ -972,10 +1085,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
+        Prerequisites
       
     </span>
   </a>
@@ -983,10 +1096,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#advantages" class="md-nav__link">
+  <a href="#required-secrets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Advantages
+        Required Secrets
       
     </span>
   </a>
@@ -994,10 +1107,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#disadvantages" class="md-nav__link">
+  <a href="#optionalconfigurable-env-values-in-the-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Disadvantages
+        Optional/Configurable env values in the workflow
       
     </span>
   </a>
@@ -1005,110 +1118,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#deployment-process" class="md-nav__link">
+  <a href="#workflow-yaml" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Deployment Process
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Deployment Process">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-prepare-canary-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Prepare Canary Environment
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-initial-canary-phase" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Initial Canary Phase
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-gradual-rollout" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Gradual Rollout
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-complete-rollout" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Complete Rollout
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-rollback-if-needed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Rollback (if needed)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#traffic-routing-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Traffic Routing Configuration
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Traffic Routing Configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#service-mesh-istio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Service Mesh (Istio)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#metrics-to-monitor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Metrics to Monitor
+        Workflow YAML
       
     </span>
   </a>
@@ -1116,60 +1129,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#decision-criteria" class="md-nav__link">
+  <a href="#how-to-deploy-with-this-action" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Decision Criteria
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Decision Criteria">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#proceed-to-next-phase" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Proceed to Next Phase
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rollback" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rollback
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#timeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Timeline
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Best Practices
+        How to deploy with this action
       
     </span>
   </a>
@@ -1193,125 +1156,127 @@
 
 
 
-<h1 id="canary-deployment">Canary Deployment<a class="headerlink" href="#canary-deployment" title="Permanent link">&para;</a></h1>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>Canary deployment gradually rolls out a new version to a subset of users before releasing to everyone. This strategy allows testing in production with minimal risk.</p>
-<h2 id="advantages">Advantages<a class="headerlink" href="#advantages" title="Permanent link">&para;</a></h2>
+<h1 id="nextjs-deployment-docker-ghcr-ssh">Next.js Deployment (Docker, GHCR, SSH)<a class="headerlink" href="#nextjs-deployment-docker-ghcr-ssh" title="Permanent link">&para;</a></h1>
+<p>GitHub Actions workflow to build and deploy a Next.js project to a remote server via Docker/Compose, pushing images to GitHub Container Registry (GHCR).</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Real user testing before full rollout</li>
-<li>Gradual traffic shift</li>
-<li>Low impact rollback</li>
-<li>Performance testing in production</li>
-<li>Early issue detection</li>
+<li>Dockerfile per environment under <code>docker/&lt;env&gt;/Dockerfile</code> (e.g., <code>docker/live/Dockerfile</code>).</li>
+<li>Remote server has Docker + Docker Compose and path <code>/opt/&lt;project_name&gt;/docker/&lt;env&gt;/</code> with a <code>docker-compose.yml</code> that pulls the GHCR image.</li>
+<li>SSH key added to repo secret <code>PRIVATE_KEY</code> (matches <code>ssh_user</code> on target host).</li>
+<li><code>GITHUB_TOKEN</code> available (built-in) for GHCR push/login.</li>
 </ul>
-<h2 id="disadvantages">Disadvantages<a class="headerlink" href="#disadvantages" title="Permanent link">&para;</a></h2>
+<h2 id="required-secrets">Required Secrets<a class="headerlink" href="#required-secrets" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Longer deployment timeline</li>
-<li>Complex traffic routing</li>
-<li>Requires monitoring expertise</li>
-<li>Testing across versions</li>
-<li>Database migration complexity</li>
+<li><code>PRIVATE_KEY</code>: SSH private key for the target server user.</li>
 </ul>
-<h2 id="deployment-process">Deployment Process<a class="headerlink" href="#deployment-process" title="Permanent link">&para;</a></h2>
-<h3 id="1-prepare-canary-environment">1. Prepare Canary Environment<a class="headerlink" href="#1-prepare-canary-environment" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>□ Deploy new version alongside stable
-□ Route small percentage of traffic (5-10%)
-□ Monitor metrics closely
-□ Run continuous tests
-</code></pre></div>
-<h3 id="2-initial-canary-phase">2. Initial Canary Phase<a class="headerlink" href="#2-initial-canary-phase" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>Traffic distribution:
-- Stable version: 95%
-- Canary version: 5%
+<h2 id="optionalconfigurable-env-values-in-the-workflow">Optional/Configurable env values in the workflow<a class="headerlink" href="#optionalconfigurable-env-values-in-the-workflow" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>build_env</code>: <code>staging</code> or <code>live</code> (controls Dockerfile path and image tag).</li>
+<li><code>ssh_user</code>: SSH user (default <code>root</code>).</li>
+<li><code>ssh_host</code>: Target host.</li>
+<li><code>project_name</code>: Folder name under <code>/opt/</code> and image name stem.</li>
+</ul>
+<h2 id="workflow-yaml">Workflow YAML<a class="headerlink" href="#workflow-yaml" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy to main</span>
 
-Monitor for 30 minutes:
-□ Error rates
-□ Response times
-□ Resource utilization
-□ User metrics
-</code></pre></div>
-<h3 id="3-gradual-rollout">3. Gradual Rollout<a class="headerlink" href="#3-gradual-rollout" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>Increase traffic in stages:
-Phase 1: 5% canary → 10% canary
-Phase 2: 10% canary → 25% canary
-Phase 3: 25% canary → 50% canary
-Phase 4: 50% canary → 100% canary
+<span class="c1"># nextjs project deployment workflow for staging/live</span>
+<span class="c1"># change ssh_host, ssh_user, if needed</span>
+<span class="c1"># add ssh key to repo secrets as PRIVATE_KEY</span>
 
-Each phase: Monitor for 30 minutes
+<span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="w">  </span><span class="nt">workflow_dispatch</span><span class="p">:</span>
+
+<span class="nt">env</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">build_env</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">live</span><span class="w"> </span><span class="c1"># staging or live</span>
+<span class="w">  </span><span class="nt">ssh_user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
+<span class="w">  </span><span class="nt">ssh_host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">165.22.54.114</span>
+<span class="w">  </span><span class="nt">project_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">next-esu</span>
+
+<span class="nt">permissions</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+<span class="w">  </span><span class="nt">packages</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+<span class="w">  </span><span class="nt">id-token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+<span class="w">  </span><span class="nt">pull-requests</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">build</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout repository</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Log in to GitHub Container Registry</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker/login-action@v3</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">registry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io</span>
+<span class="w">          </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.actor }}</span>
+<span class="w">          </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build Docker image</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">PROJECT_NAME=$(basename ${{ github.repository }})</span>
+<span class="w">          </span><span class="no">docker build \</span>
+<span class="w">            </span><span class="no">-f ./docker/${{ env.build_env }}/Dockerfile \</span>
+<span class="w">            </span><span class="no">-t ghcr.io/${{ github.repository_owner }}/${PROJECT_NAME}:${{ env.build_env }} \</span>
+<span class="w">            </span><span class="no">-t ghcr.io/${{ github.repository_owner }}/${PROJECT_NAME}:${{ github.sha }} .</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Push Docker image</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">PROJECT_NAME=$(basename ${{ github.repository }})</span>
+<span class="w">          </span><span class="no">docker push ghcr.io/${{ github.repository_owner }}/${PROJECT_NAME}:${{ env.build_env }}</span>
+<span class="w">          </span><span class="no">docker push ghcr.io/${{ github.repository_owner }}/${PROJECT_NAME}:${{ github.sha }}</span>
+
+<span class="w">  </span><span class="nt">deploy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout repository</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Copy files to server</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wlixcc/SFTP-Deploy-Action@v1.2.6</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${{</span><span class="nv"> </span><span class="s">env.ssh_user</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">          </span><span class="nt">server</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${{</span><span class="nv"> </span><span class="s">env.ssh_host</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">          </span><span class="nt">ssh_private_key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.PRIVATE_KEY }}</span>
+<span class="w">          </span><span class="nt">local_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;./docker/*&quot;</span>
+<span class="w">          </span><span class="nt">remote_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/opt/${{</span><span class="nv"> </span><span class="s">env.project_name</span><span class="nv"> </span><span class="s">}}/docker/&quot;</span>
+<span class="w">          </span><span class="nt">delete_remote_files</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">sftpArgs</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;-o</span><span class="nv"> </span><span class="s">ConnectTimeout=5&quot;</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Execute SSH commands on remote server</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JimCronqvist/action-ssh@master</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${{</span><span class="nv"> </span><span class="s">env.ssh_user</span><span class="nv"> </span><span class="s">}}@${{</span><span class="nv"> </span><span class="s">env.ssh_host</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">          </span><span class="nt">privateKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.PRIVATE_KEY }}</span>
+<span class="w">          </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">            </span><span class="no">docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}</span>
+<span class="w">            </span><span class="no">cd /opt/${{ env.project_name }}/docker/${{ env.build_env }} &amp;&amp; docker compose pull &amp;&amp; docker compose up -d --remove-orphans &amp;&amp; docker image prune -af</span>
+
+<span class="w">  </span><span class="nt">clean</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">clean</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">snok/container-retention-policy@v3.0.0</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">account</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">weblankan-next</span>
+<span class="w">          </span><span class="nt">token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
+<span class="w">          </span><span class="nt">image-names</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ env.project_name }}</span>
+<span class="w">          </span><span class="nt">cut-off</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7d</span>
+<span class="w">          </span><span class="nt">keep-n-most-recent</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">          </span><span class="nt">dry-run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
-<h3 id="4-complete-rollout">4. Complete Rollout<a class="headerlink" href="#4-complete-rollout" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>□ All traffic on new version
-□ Remove canary infrastructure
-□ Archive canary logs
-□ Document results
-</code></pre></div>
-<h3 id="5-rollback-if-needed">5. Rollback (if needed)<a class="headerlink" href="#5-rollback-if-needed" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>□ Identify issue
-□ Immediately shift traffic back to stable
-□ Investigate root cause
-□ Plan remediation
-</code></pre></div>
-<h2 id="traffic-routing-configuration">Traffic Routing Configuration<a class="headerlink" href="#traffic-routing-configuration" title="Permanent link">&para;</a></h2>
-<h3 id="service-mesh-istio">Service Mesh (Istio)<a class="headerlink" href="#service-mesh-istio" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.istio.io/v1beta1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VirtualService</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapp</span>
-<span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">hosts</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapp</span>
-<span class="w">  </span><span class="nt">http</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">match</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uri</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">prefix</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/&quot;</span>
-<span class="w">    </span><span class="nt">route</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">destination</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapp-stable</span>
-<span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">95</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">destination</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapp-canary</span>
-<span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
-</code></pre></div>
-<h2 id="metrics-to-monitor">Metrics to Monitor<a class="headerlink" href="#metrics-to-monitor" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Error Rate</strong>: Should not increase</li>
-<li><strong>Response Time</strong>: Should not degrade</li>
-<li><strong>CPU/Memory</strong>: Compare with stable</li>
-<li><strong>Business Metrics</strong>: User engagement</li>
-<li><strong>Exception Rates</strong>: New issues</li>
-</ul>
-<h2 id="decision-criteria">Decision Criteria<a class="headerlink" href="#decision-criteria" title="Permanent link">&para;</a></h2>
-<h3 id="proceed-to-next-phase">Proceed to Next Phase<a class="headerlink" href="#proceed-to-next-phase" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Error rate stable or decreasing</li>
-<li>Response time acceptable</li>
-<li>No new exceptions</li>
-<li>User engagement positive</li>
-</ul>
-<h3 id="rollback">Rollback<a class="headerlink" href="#rollback" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Error rate increases &gt; 2x</li>
-<li>Response time increases &gt; 10%</li>
-<li>Critical exceptions detected</li>
-<li>User complaints increase</li>
-</ul>
-<h2 id="timeline">Timeline<a class="headerlink" href="#timeline" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Canary setup: 5-10 minutes</li>
-<li>Initial phase: 30 minutes</li>
-<li>Phase 2: 30 minutes</li>
-<li>Phase 3: 30 minutes</li>
-<li>Phase 4: 30 minutes</li>
-<li><strong>Total: 2-2.5 hours</strong></li>
-</ul>
-<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h2 id="how-to-deploy-with-this-action">How to deploy with this action<a class="headerlink" href="#how-to-deploy-with-this-action" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Start small</strong> - 5% traffic initially</li>
-<li><strong>Monitor everything</strong> - Watch all metrics</li>
-<li><strong>Automated rollback</strong> - Quick response to issues</li>
-<li><strong>Clear metrics</strong> - Know when to proceed/rollback</li>
-<li><strong>Communication</strong> - Keep team informed</li>
-<li><strong>Documentation</strong> - Record all decisions</li>
+<li>Add secret <code>PRIVATE_KEY</code> (SSH key that can write to <code>/opt/&lt;project_name&gt;</code>).</li>
+<li>Update <code>ssh_host</code>, <code>ssh_user</code>, <code>project_name</code>, and <code>build_env</code> if needed.</li>
+<li>Ensure <code>/opt/&lt;project_name&gt;/docker/&lt;env&gt;/docker-compose.yml</code> uses the GHCR image tags <code>${build_env}</code> or <code>${{ github.sha }}</code> as needed.</li>
+<li>Push to <code>main</code> or trigger <code>Run workflow</code> manually; workflow builds image, pushes to GHCR, syncs <code>docker/</code> to server, then runs <code>docker compose pull &amp;&amp; up -d</code>.</li>
+<li>Confirm containers are healthy on the server; logs via <code>docker compose logs -f</code> in <code>/opt/&lt;project_name&gt;/docker/&lt;env&gt;/</code>.</li>
 </ol>
 
 

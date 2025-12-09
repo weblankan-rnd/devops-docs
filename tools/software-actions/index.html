@@ -13,6 +13,8 @@
       
       
       
+        <link rel="prev" href="../nextjs-actions/">
+      
       
       
         
@@ -23,7 +25,7 @@
     
     
       
-        <title>Kubernetes - Web Lankan Docs</title>
+        <title>Software - Web Lankan Docs</title>
       
     
     
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kubernetes" class="md-skip">
+        <a href="#nextjs-staging-deployment-docker-ghcr-ssh" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kubernetes
+              Software
             
           </span>
         </div>
@@ -288,10 +290,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../github-actions/" class="md-tabs__link">
           
   
@@ -806,26 +810,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   
@@ -843,7 +852,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -914,10 +923,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../software-actions/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -933,6 +969,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-secrets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required secrets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow YAML
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-deploy-with-this-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to deploy with this action
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -972,10 +1072,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
+        Prerequisites
       
     </span>
   </a>
@@ -983,10 +1083,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-concepts" class="md-nav__link">
+  <a href="#required-secrets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Concepts
+        Required secrets
       
     </span>
   </a>
@@ -994,10 +1094,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-kubectl-commands" class="md-nav__link">
+  <a href="#workflow-yaml" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Common kubectl Commands
+        Workflow YAML
       
     </span>
   </a>
@@ -1005,32 +1105,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
+  <a href="#how-to-deploy-with-this-action" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Best Practices
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deployment-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Deployment Example
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Troubleshooting
+        How to deploy with this action
       
     </span>
   </a>
@@ -1054,90 +1132,136 @@
 
 
 
-<h1 id="kubernetes">Kubernetes<a class="headerlink" href="#kubernetes" title="Permanent link">&para;</a></h1>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>Kubernetes (K8s) is an open-source container orchestration platform for automating deployment, scaling, and management of containerized applications.</p>
-<h2 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">&para;</a></h2>
-<p><strong>Pod</strong>: Smallest deployable unit containing one or more containers</p>
-<p><strong>Deployment</strong>: Desired state specification for running applications</p>
-<p><strong>Service</strong>: Network abstraction for accessing pods</p>
-<p><strong>Namespace</strong>: Virtual cluster within a physical cluster</p>
-<h2 id="common-kubectl-commands">Common kubectl Commands<a class="headerlink" href="#common-kubectl-commands" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># View clusters</span>
-kubectl<span class="w"> </span>cluster-info
+<h1 id="nextjs-staging-deployment-docker-ghcr-ssh">Next.js Staging Deployment (Docker, GHCR, SSH)<a class="headerlink" href="#nextjs-staging-deployment-docker-ghcr-ssh" title="Permanent link">&para;</a></h1>
+<p>GitHub Actions workflow to build and deploy a Next.js project to a staging server using Docker/Compose with images stored in GitHub Container Registry (GHCR).</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Dockerfile at <code>docker/staging/Dockerfile</code> (and optional <code>docker/live/Dockerfile</code> if reused).</li>
+<li>Remote server has Docker + Docker Compose and path <code>/opt/&lt;project_name&gt;/docker/staging/</code> containing <code>docker-compose.yml</code> referencing the GHCR image tag <code>staging</code> (or commit SHA).</li>
+<li>SSH key added to repo secret <code>PRIVATE_KEY</code> for the target user.</li>
+<li>Optional: <code>DOCKER_USER</code> and <code>DOCKER_PASSWORD</code> secrets if not using <code>GITHUB_TOKEN</code> for registry auth.</li>
+</ul>
+<h2 id="required-secrets">Required secrets<a class="headerlink" href="#required-secrets" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>PRIVATE_KEY</code>: SSH private key for target host user.</li>
+<li><code>GITHUB_TOKEN</code>: Built-in; used for GHCR push/login in build job.</li>
+<li><code>DOCKER_USER</code>, <code>DOCKER_PASSWORD</code>: Used on the server during deploy login (per provided workflow).</li>
+</ul>
+<h2 id="workflow-yaml">Workflow YAML<a class="headerlink" href="#workflow-yaml" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy to staging server</span>
+<span class="c1"># nextjs project deployment workflow for staging</span>
+<span class="c1"># change ssh_host, ssh_user if needed</span>
+<span class="c1"># add ssh key to repo secrets as PRIVATE_KEY</span>
 
-<span class="c1"># Create deployment</span>
-kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>deployment.yaml
+<span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">staging</span>
+<span class="w">  </span><span class="nt">workflow_dispatch</span><span class="p">:</span>
 
-<span class="c1"># View deployments</span>
-kubectl<span class="w"> </span>get<span class="w"> </span>deployments
+<span class="nt">env</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">build_env</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">staging</span><span class="w"> </span><span class="c1"># staging or live</span>
+<span class="w">  </span><span class="nt">ssh_user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
+<span class="w">  </span><span class="nt">ssh_host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">202.124.164.163</span>
+<span class="w">  </span><span class="nt">project_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">david-pieris-gwm</span>
 
-<span class="c1"># View pods</span>
-kubectl<span class="w"> </span>get<span class="w"> </span>pods
+<span class="nt">permissions</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+<span class="w">  </span><span class="nt">packages</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+<span class="w">  </span><span class="nt">id-token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+<span class="w">  </span><span class="nt">pull-requests</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
 
-<span class="c1"># View services</span>
-kubectl<span class="w"> </span>get<span class="w"> </span>services
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">build</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout repository</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
 
-<span class="c1"># Scale deployment</span>
-kubectl<span class="w"> </span>scale<span class="w"> </span>deployment<span class="w"> </span>myapp<span class="w"> </span>--replicas<span class="o">=</span><span class="m">3</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Log in to GitHub Container Registry</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker/login-action@v3</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">registry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io</span>
+<span class="w">          </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.actor }}</span>
+<span class="w">          </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
 
-<span class="c1"># Rolling update</span>
-kubectl<span class="w"> </span><span class="nb">set</span><span class="w"> </span>image<span class="w"> </span>deployment/myapp<span class="w"> </span><span class="nv">myapp</span><span class="o">=</span>myapp:2.0
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build Docker image</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">PROJECT_NAME=$(basename ${{ github.repository }})</span>
+<span class="w">          </span><span class="no">docker build \</span>
+<span class="w">            </span><span class="no">-f ./docker/${{ env.build_env }}/Dockerfile \</span>
+<span class="w">            </span><span class="no">-t ghcr.io/${{ github.repository_owner }}/${PROJECT_NAME}:${{ env.build_env }} \</span>
+<span class="w">            </span><span class="no">-t ghcr.io/${{ github.repository_owner }}/${PROJECT_NAME}:${{ github.sha }} .</span>
 
-<span class="c1"># View logs</span>
-kubectl<span class="w"> </span>logs<span class="w"> </span>&lt;pod-name&gt;
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Push Docker image</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">PROJECT_NAME=$(basename ${{ github.repository }})</span>
+<span class="w">          </span><span class="no">docker push ghcr.io/${{ github.repository_owner }}/${PROJECT_NAME}:${{ env.build_env }}</span>
+<span class="w">          </span><span class="no">docker push ghcr.io/${{ github.repository_owner }}/${PROJECT_NAME}:${{ github.sha }}</span>
 
-<span class="c1"># Execute command in pod</span>
-kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>&lt;pod-name&gt;<span class="w"> </span>--<span class="w"> </span>/bin/bash
+<span class="w">  </span><span class="nt">deploy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout repository</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">copy files to server</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wlixcc/SFTP-Deploy-Action@v1.2.6</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${{</span><span class="nv"> </span><span class="s">env.ssh_user</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">          </span><span class="nt">server</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${{</span><span class="nv"> </span><span class="s">env.ssh_host</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">          </span><span class="nt">ssh_private_key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.PRIVATE_KEY }}</span>
+<span class="w">          </span><span class="nt">local_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;./docker/*&quot;</span>
+<span class="w">          </span><span class="nt">remote_path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/opt/${{</span><span class="nv"> </span><span class="s">env.project_name</span><span class="nv"> </span><span class="s">}}/docker/&quot;</span>
+<span class="w">          </span><span class="nt">delete_remote_files</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">sftpArgs</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;-o</span><span class="nv"> </span><span class="s">ConnectTimeout=5&quot;</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Execute SSH commands on remote server</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JimCronqvist/action-ssh@master</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${{</span><span class="nv"> </span><span class="s">env.ssh_user</span><span class="nv"> </span><span class="s">}}@${{</span><span class="nv"> </span><span class="s">env.ssh_host</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">          </span><span class="nt">privateKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.PRIVATE_KEY }}</span>
+<span class="w">          </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">            </span><span class="no">docker login ghcr.io -u ${{ secrets.DOCKER_USER }} -p ${{ secrets.DOCKER_PASSWORD }}</span>
+<span class="w">            </span><span class="no">cd /opt/${{ env.project_name }}/docker/${{ env.build_env }}</span>
+<span class="w">            </span><span class="no">docker compose up -d --pull always</span>
+<span class="w">            </span><span class="no">docker system prune -af</span>
+
+<span class="w">  </span><span class="nt">create-release</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">marvinpinto/action-automatic-releases@latest</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">repo_token</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${{</span><span class="nv"> </span><span class="s">secrets.GITHUB_TOKEN</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">          </span><span class="nt">prerelease</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">          </span><span class="nt">automatic_release_tag</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;v1.0.${{</span><span class="nv"> </span><span class="s">github.run_number</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">          </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Release</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">commit</span><span class="nv"> </span><span class="s">${{</span><span class="nv"> </span><span class="s">github.sha</span><span class="nv"> </span><span class="s">}}&quot;</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Optional cleanup job (disabled)</span>
+<span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">clean</span><span class="p p-Indicator">:</span>
+<span class="w">   </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">   </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">create-release</span>
+<span class="w">   </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">clean</span>
+<span class="w">   </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">     </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">snok/container-retention-policy@v3.0.0</span>
+<span class="w">       </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">         </span><span class="nt">account</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">weblankan-lk</span>
+<span class="w">         </span><span class="nt">token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span>
+<span class="w">         </span><span class="nt">image-names</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ env.project_name }}</span>
+<span class="w">         </span><span class="nt">cut-off</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7d</span>
+<span class="w">         </span><span class="nt">keep-n-most-recent</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">         </span><span class="nt">dry-run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
-<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h2 id="how-to-deploy-with-this-action">How to deploy with this action<a class="headerlink" href="#how-to-deploy-with-this-action" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Resource Limits</strong> - Always set CPU and memory limits</li>
-<li><strong>Liveness Probes</strong> - Monitor container health</li>
-<li><strong>Readiness Probes</strong> - Control traffic routing</li>
-<li><strong>Rolling Updates</strong> - Gradual deployment strategy</li>
-<li><strong>Namespace Isolation</strong> - Separate environments</li>
-<li><strong>RBAC</strong> - Role-based access control</li>
+<li>Set secrets: <code>PRIVATE_KEY</code>, <code>DOCKER_USER</code>, <code>DOCKER_PASSWORD</code> (and rely on built-in <code>GITHUB_TOKEN</code>).</li>
+<li>Update <code>ssh_host</code>, <code>ssh_user</code>, <code>project_name</code>, and <code>build_env</code> if needed.</li>
+<li>Ensure <code>/opt/&lt;project_name&gt;/docker/staging/docker-compose.yml</code> uses the GHCR image tag <code>staging</code> (or commit SHA) pulled in the workflow.</li>
+<li>Push to the <code>staging</code> branch or trigger <code>workflow_dispatch</code> to deploy.</li>
+<li>Verify containers on the server: <code>docker compose ps</code> and <code>docker compose logs -f</code> in <code>/opt/&lt;project_name&gt;/docker/staging/</code>.</li>
 </ol>
-<h2 id="deployment-example">Deployment Example<a class="headerlink" href="#deployment-example" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapp</span>
-<span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
-<span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapp</span>
-<span class="w">  </span><span class="nt">template</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">labels</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapp</span>
-<span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">containers</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapp</span>
-<span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myapp:1.0</span>
-<span class="w">        </span><span class="nt">ports</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8000</span>
-<span class="w">        </span><span class="nt">resources</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">requests</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;64Mi&quot;</span>
-<span class="w">            </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;250m&quot;</span>
-<span class="w">          </span><span class="nt">limits</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;128Mi&quot;</span>
-<span class="w">            </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;500m&quot;</span>
-<span class="w">        </span><span class="nt">livenessProbe</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">httpGet</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/health</span>
-<span class="w">            </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8000</span>
-<span class="w">          </span><span class="nt">initialDelaySeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
-<span class="w">          </span><span class="nt">periodSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
-</code></pre></div>
-<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
-<p><strong>Pod not starting</strong>: Check logs with <code>kubectl logs</code><br />
-<strong>Service not accessible</strong>: Verify service selector and labels<br />
-<strong>Deployment stuck</strong>: Check resource quotas and node capacity<br />
-<strong>Performance issues</strong>: Review resource utilization and scaling</p>
 
 
 
