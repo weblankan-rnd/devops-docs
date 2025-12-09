@@ -31,11 +31,13 @@ nav:
     - Nginx with Let's Encrypt SSL: infrastructure/nginx-letsencrypt.md
     - Optimized .htaccess (Apache): infrastructure/htaccess-optimized.md
   - Hosting:
-    - Storage & Backups: infrastructure/storage.md
+    - Logins: accounts/aws.md
+    
   - Useful Links:
     - Overview: useful-links/index.md
     - Live Logins: https://docs.google.com/spreadsheets/d/1tfJq1414u3qUI4p-iugevAZUM2CC3CFhQPTzzxtLB_M/edit?gid=0#gid=0
-  - Actions:
+
+  - Actions:  
     - Wordpress: tools/github-actions.md
     - Nextjs: tools/nextjs-actions.md
     - Software: tools/software-actions.md
