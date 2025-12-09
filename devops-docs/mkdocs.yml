@@ -40,6 +40,7 @@ nav:
     - DevOps Logins: https://docs.google.com/spreadsheets/d/1LVwIUrfTVD0zis1ZZKYikXPngy_wZe4Q-nkzTIiuTow/edit?gid=0#gid=0
 
   - Actions:  
+    - Overview: monitoring/metrics.md
     - Wordpress: tools/github-actions.md
     - Nextjs: tools/nextjs-actions.md
     - Software: tools/software-actions.md
