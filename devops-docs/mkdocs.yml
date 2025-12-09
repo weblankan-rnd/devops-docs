@@ -32,10 +32,12 @@ nav:
     - Optimized .htaccess (Apache): infrastructure/htaccess-optimized.md
   - Hosting:
     - Logins: accounts/aws.md
+    - AWS Launch Script: infrastructure/aws-launch-script.md
 
   - Useful Links:
     - Overview: useful-links/index.md
     - Wordpress Logins: https://docs.google.com/spreadsheets/d/1tfJq1414u3qUI4p-iugevAZUM2CC3CFhQPTzzxtLB_M/edit?gid=0#gid=0
+    - DevOps Logins: https://docs.google.com/spreadsheets/d/1LVwIUrfTVD0zis1ZZKYikXPngy_wZe4Q-nkzTIiuTow/edit?gid=0#gid=0
 
   - Actions:  
     - Wordpress: tools/github-actions.md
