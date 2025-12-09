@@ -13,6 +13,10 @@
       
       
       
+        <link rel="prev" href="../../monitoring/alerts/">
+      
+      
+        <link rel="next" href="../nginx-letsencrypt/">
       
       
         
@@ -23,7 +27,7 @@
     
     
       
-        <title>ELK Stack - Web Lankan Docs</title>
+        <title>Nginx Reverse Proxy - Web Lankan Docs</title>
       
     
     
@@ -74,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#elk-stack" class="md-skip">
+        <a href="#secure-nginx-reverse-proxy-setup-with-cloudflare-proxy" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ELK Stack
+              Nginx Reverse Proxy
             
           </span>
         </div>
@@ -228,11 +232,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../infrastructure/nginx-cloudflare/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -252,7 +258,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../infrastructure/cloud-platform/" class="md-tabs__link">
+        <a href="../cloud-platform/" class="md-tabs__link">
           
   
   
@@ -272,7 +278,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../github-actions/" class="md-tabs__link">
+        <a href="../../tools/github-actions/" class="md-tabs__link">
           
   
   
@@ -497,26 +503,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -534,7 +545,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -549,10 +560,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../infrastructure/nginx-cloudflare/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nginx Reverse Proxy
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -568,6 +606,220 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-configure-nginx-reverse-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Configure Nginx Reverse Proxy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Configure Nginx Reverse Proxy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-nginx-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a New Nginx Configuration File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-and-exit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save and Exit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-enable-configuration-and-restart-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Enable Configuration and Restart Nginx
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-cloudflare-ssl-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Cloudflare SSL Settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Cloudflare SSL Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-cloudflare-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure Cloudflare Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-verify-your-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Verify Your Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-nginx-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check Nginx Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-logs-for-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check Logs for Errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-if-nginx-is-listening-on-port-80" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check if Nginx is Listening on Port 80
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -580,7 +832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infrastructure/nginx-letsencrypt/" class="md-nav__link">
+      <a href="../nginx-letsencrypt/" class="md-nav__link">
         
   
   
@@ -608,7 +860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infrastructure/htaccess-optimized/" class="md-nav__link">
+      <a href="../htaccess-optimized/" class="md-nav__link">
         
   
   
@@ -695,7 +947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infrastructure/cloud-platform/" class="md-nav__link">
+      <a href="../cloud-platform/" class="md-nav__link">
         
   
   
@@ -723,7 +975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infrastructure/storage/" class="md-nav__link">
+      <a href="../storage/" class="md-nav__link">
         
   
   
@@ -751,7 +1003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infrastructure/databases/" class="md-nav__link">
+      <a href="../databases/" class="md-nav__link">
         
   
   
@@ -779,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infrastructure/network/" class="md-nav__link">
+      <a href="../network/" class="md-nav__link">
         
   
   
@@ -866,7 +1118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../github-actions/" class="md-nav__link">
+      <a href="../../tools/github-actions/" class="md-nav__link">
         
   
   
@@ -894,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../github-actions/" class="md-nav__link">
+      <a href="../../tools/github-actions/" class="md-nav__link">
         
   
   
@@ -1146,7 +1398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/" class="md-nav__link">
+      <a href="../../tools/docker/" class="md-nav__link">
         
   
   
@@ -1174,7 +1426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kubernetes/" class="md-nav__link">
+      <a href="../../tools/kubernetes/" class="md-nav__link">
         
   
   
@@ -1202,7 +1454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../terraform/" class="md-nav__link">
+      <a href="../../tools/terraform/" class="md-nav__link">
         
   
   
@@ -1230,7 +1482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ansible/" class="md-nav__link">
+      <a href="../../tools/ansible/" class="md-nav__link">
         
   
   
@@ -1258,7 +1510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../jenkins/" class="md-nav__link">
+      <a href="../../tools/jenkins/" class="md-nav__link">
         
   
   
@@ -1321,10 +1573,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
+        Prerequisites
       
     </span>
   </a>
@@ -1332,22 +1584,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#components" class="md-nav__link">
+  <a href="#step-1-configure-nginx-reverse-proxy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Components
+        Step 1: Configure Nginx Reverse Proxy
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Components">
+    <nav class="md-nav" aria-label="Step 1: Configure Nginx Reverse Proxy">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#elasticsearch" class="md-nav__link">
+  <a href="#create-a-new-nginx-configuration-file" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Elasticsearch
+        Create a New Nginx Configuration File
       
     </span>
   </a>
@@ -1355,21 +1607,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#logstash" class="md-nav__link">
+  <a href="#save-and-exit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Logstash
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kibana" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Kibana
+        Save and Exit
       
     </span>
   </a>
@@ -1382,10 +1623,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
+  <a href="#step-2-enable-configuration-and-restart-nginx" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Architecture
+        Step 2: Enable Configuration and Restart Nginx
       
     </span>
   </a>
@@ -1393,44 +1634,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#logstash-pipeline" class="md-nav__link">
+  <a href="#step-3-cloudflare-ssl-settings" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Logstash Pipeline
+        Step 3: Cloudflare SSL Settings
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#index-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Index Management
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Index Management">
+    <nav class="md-nav" aria-label="Step 3: Cloudflare SSL Settings">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#index-naming" class="md-nav__link">
+  <a href="#configure-cloudflare-dashboard" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Index Naming
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#index-lifecycle" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Index Lifecycle
+        Configure Cloudflare Dashboard
       
     </span>
   </a>
@@ -1443,22 +1662,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#kibana-dashboards" class="md-nav__link">
+  <a href="#step-4-verify-your-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Kibana Dashboards
+        Step 4: Verify Your Setup
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Kibana Dashboards">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#application-monitoring" class="md-nav__link">
+  <a href="#check-nginx-status" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Application Monitoring
+        Check Nginx Status
       
     </span>
   </a>
@@ -1466,10 +1707,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#system-monitoring" class="md-nav__link">
+  <a href="#check-logs-for-errors" class="md-nav__link">
     <span class="md-ellipsis">
       
-        System Monitoring
+        Check Logs for Errors
       
     </span>
   </a>
@@ -1477,10 +1718,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#security-monitoring" class="md-nav__link">
+  <a href="#check-if-nginx-is-listening-on-port-80" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Security Monitoring
+        Check if Nginx is Listening on Port 80
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Issues
       
     </span>
   </a>
@@ -1493,10 +1745,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-queries" class="md-nav__link">
+  <a href="#security-best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Common Queries
+        Security Best Practices
       
     </span>
   </a>
@@ -1504,32 +1756,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#performance-tuning" class="md-nav__link">
+  <a href="#additional-resources" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Performance Tuning
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#alerting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alerting
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Best Practices
+        Additional Resources
       
     </span>
   </a>
@@ -1553,131 +1783,173 @@
 
 
 
-<h1 id="elk-stack">ELK Stack<a class="headerlink" href="#elk-stack" title="Permanent link">&para;</a></h1>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>ELK Stack (Elasticsearch, Logstash, Kibana) is a comprehensive logging and analytics platform.</p>
-<h2 id="components">Components<a class="headerlink" href="#components" title="Permanent link">&para;</a></h2>
-<h3 id="elasticsearch">Elasticsearch<a class="headerlink" href="#elasticsearch" title="Permanent link">&para;</a></h3>
-<p>Distributed search and analytics engine:
-- Full-text search
-- Near real-time analysis
-- Scalable to petabytes
-- RESTful API</p>
-<h3 id="logstash">Logstash<a class="headerlink" href="#logstash" title="Permanent link">&para;</a></h3>
-<p>Data processing pipeline:
-- Collect from multiple sources
-- Parse and structure data
-- Enrich with context
-- Ship to Elasticsearch</p>
-<h3 id="kibana">Kibana<a class="headerlink" href="#kibana" title="Permanent link">&para;</a></h3>
-<p>Data visualization platform:
-- Dashboards
-- Searches
-- Graphs and charts
-- Alerting</p>
-<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>Data Sources
-    ↓
-Logstash (Collection &amp; Processing)
-    ↓
-Elasticsearch (Storage &amp; Indexing)
-    ↓
-Kibana (Visualization)
-</code></pre></div>
-<h2 id="logstash-pipeline">Logstash Pipeline<a class="headerlink" href="#logstash-pipeline" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>input {
-  syslog {
-    port =&gt; 514
-  }
-}
-
-filter {
-  grok {
-    match =&gt; { &quot;message&quot; =&gt; &quot;%{SYSLOGLINE}&quot; }
-  }
-  date {
-    match =&gt; [ &quot;timestamp&quot;, &quot;MMM  d HH:mm:ss&quot;, &quot;MMM dd HH:mm:ss&quot; ]
-  }
-}
-
-output {
-  elasticsearch {
-    hosts =&gt; [&quot;localhost:9200&quot;]
-    index =&gt; &quot;syslog-%{+YYYY.MM.dd}&quot;
-  }
-}
-</code></pre></div>
-<h2 id="index-management">Index Management<a class="headerlink" href="#index-management" title="Permanent link">&para;</a></h2>
-<h3 id="index-naming">Index Naming<a class="headerlink" href="#index-naming" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>logstash-app-2025.12.09
-logstash-app-2025.12.10
-logstash-app-2025.12.11
-</code></pre></div>
-<h3 id="index-lifecycle">Index Lifecycle<a class="headerlink" href="#index-lifecycle" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>Hot → Warm → Cold → Delete
-
-- Hot: 1 day, fully searchable
-- Warm: 30 days, slow storage
-- Cold: 90 days, archived
-- Delete: After retention period
-</code></pre></div>
-<h2 id="kibana-dashboards">Kibana Dashboards<a class="headerlink" href="#kibana-dashboards" title="Permanent link">&para;</a></h2>
-<h3 id="application-monitoring">Application Monitoring<a class="headerlink" href="#application-monitoring" title="Permanent link">&para;</a></h3>
+<h1 id="secure-nginx-reverse-proxy-setup-with-cloudflare-proxy">Secure Nginx Reverse Proxy Setup with Cloudflare Proxy<a class="headerlink" href="#secure-nginx-reverse-proxy-setup-with-cloudflare-proxy" title="Permanent link">&para;</a></h1>
+<p>This guide covers setting up Nginx as a reverse proxy with Cloudflare handling SSL/TLS termination for secure, scalable deployments.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>Before proceeding, ensure:</p>
 <ul>
-<li>Request rate over time</li>
-<li>Error rate by endpoint</li>
-<li>Response time distribution</li>
-<li>Top slow queries</li>
+<li>You have <strong>root or sudo privileges</strong></li>
+<li><strong>Nginx is installed and running</strong></li>
+<li>Your domain is properly pointed to <strong>Cloudflare and proxied</strong> (orange cloud enabled) in Cloudflare's DNS settings</li>
 </ul>
-<h3 id="system-monitoring">System Monitoring<a class="headerlink" href="#system-monitoring" title="Permanent link">&para;</a></h3>
-<ul>
-<li>CPU usage</li>
-<li>Memory consumption</li>
-<li>Disk I/O</li>
-<li>Network throughput</li>
-</ul>
-<h3 id="security-monitoring">Security Monitoring<a class="headerlink" href="#security-monitoring" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Authentication failures</li>
-<li>Unusual access patterns</li>
-<li>Configuration changes</li>
-<li>Security events</li>
-</ul>
-<h2 id="common-queries">Common Queries<a class="headerlink" href="#common-queries" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code># Count errors in last hour
-level:ERROR AND timestamp:[now-1h TO now]
-
-# Average response time by endpoint
-endpoint:* | stats avg(response_time) by endpoint
-
-# Most frequent error messages
-level:ERROR | stats count by message | sort count desc
+<h2 id="step-1-configure-nginx-reverse-proxy">Step 1: Configure Nginx Reverse Proxy<a class="headerlink" href="#step-1-configure-nginx-reverse-proxy" title="Permanent link">&para;</a></h2>
+<p>If you are running a backend service on port 8000, configure Nginx as a reverse proxy.</p>
+<h3 id="create-a-new-nginx-configuration-file">Create a New Nginx Configuration File<a class="headerlink" href="#create-a-new-nginx-configuration-file" title="Permanent link">&para;</a></h3>
+<p>Replace <code>crm.hostweblankan.in</code> with your actual domain:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/nginx/sites-available/crm.hostweblankan.in
 </code></pre></div>
-<h2 id="performance-tuning">Performance Tuning<a class="headerlink" href="#performance-tuning" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Shard size</strong> - Optimal ~30-50GB</li>
-<li><strong>Refresh interval</strong> - 30s default</li>
-<li><strong>Merge policy</strong> - Balance indexing vs search</li>
-<li><strong>Heap allocation</strong> - 50% of available RAM</li>
-<li><strong>Circuit breaker</strong> - Prevent OOM</li>
-</ul>
-<h2 id="alerting">Alerting<a class="headerlink" href="#alerting" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>Configure alerts on:
-- High error rates
-- Slow response times
-- Low disk space
-- Service unavailability
-- Security events
+<p>Paste the following configuration:</p>
+<div class="highlight"><pre><span></span><code><span class="k">server</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kn">listen</span><span class="w"> </span><span class="mi">80</span><span class="p">;</span>
+<span class="w">    </span><span class="kn">server_name</span><span class="w"> </span><span class="s">crm.hostweblankan.in</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://127.0.0.1:8000</span><span class="p">;</span><span class="w">  </span><span class="c1"># Ensure the upstream matches your app setup</span>
+<span class="w">        </span><span class="kn">proxy_http_version</span><span class="w"> </span><span class="mi">1</span><span class="s">.1</span><span class="p">;</span>
+<span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Host</span><span class="w"> </span><span class="nv">$host</span><span class="p">;</span>
+<span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Real-IP</span><span class="w"> </span><span class="nv">$remote_addr</span><span class="p">;</span>
+<span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Forwarded-For</span><span class="w"> </span><span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+<span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Forwarded-Proto</span><span class="w"> </span><span class="nv">$scheme</span><span class="p">;</span>
+<span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Connection</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
-<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="save-and-exit">Save and Exit<a class="headerlink" href="#save-and-exit" title="Permanent link">&para;</a></h3>
+<p>Press the following keys in sequence:</p>
 <ol>
-<li><strong>Index rotation</strong> - Daily indices</li>
-<li><strong>Retention policy</strong> - Defined schedule</li>
-<li><strong>Field mapping</strong> - Consistent schema</li>
-<li><strong>Security</strong> - Encrypt at rest and transit</li>
-<li><strong>Monitoring</strong> - Monitor ELK itself</li>
-<li><strong>Capacity planning</strong> - Growth estimation</li>
+<li>Press <strong>CTRL + X</strong> - Exit editor</li>
+<li>Press <strong>Y</strong> - Confirm save</li>
+<li>Press <strong>ENTER</strong> - Confirm filename</li>
 </ol>
+<h2 id="step-2-enable-configuration-and-restart-nginx">Step 2: Enable Configuration and Restart Nginx<a class="headerlink" href="#step-2-enable-configuration-and-restart-nginx" title="Permanent link">&para;</a></h2>
+<p>Enable the Nginx configuration and verify it:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create symbolic link to enable the site</span>
+sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/etc/nginx/sites-available/crm.hostweblankan.in<span class="w"> </span>/etc/nginx/sites-enabled/
+
+<span class="c1"># Test Nginx configuration for syntax errors</span>
+sudo<span class="w"> </span>nginx<span class="w"> </span>-t
+
+<span class="c1"># Restart Nginx to apply changes</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>nginx
+</code></pre></div>
+<h2 id="step-3-cloudflare-ssl-settings">Step 3: Cloudflare SSL Settings<a class="headerlink" href="#step-3-cloudflare-ssl-settings" title="Permanent link">&para;</a></h2>
+<p>Since Cloudflare is proxying your domain, it handles SSL/TLS termination. You do not need to install SSL certificates on your server.</p>
+<h3 id="configure-cloudflare-dashboard">Configure Cloudflare Dashboard<a class="headerlink" href="#configure-cloudflare-dashboard" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Navigate to <strong>Cloudflare Dashboard</strong> → <strong>SSL/TLS Settings</strong></li>
+<li>Set <strong>SSL mode</strong> to:</li>
+<li><strong>"Full"</strong> (Recommended) - If your backend supports HTTPS</li>
+<li><strong>"Flexible"</strong> - If your backend only supports HTTP</li>
+<li><strong>Disable</strong> "Always Use HTTPS" (Cloudflare handles it automatically)</li>
+<li><strong>Enable</strong> "Automatic HTTPS Rewrites" for better compatibility</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Best Practice</p>
+<p>Use <strong>Full Mode</strong> for production environments to ensure end-to-end encryption.</p>
+</div>
+<h2 id="step-4-verify-your-setup">Step 4: Verify Your Setup<a class="headerlink" href="#step-4-verify-your-setup" title="Permanent link">&para;</a></h2>
+<p>Once the setup is complete, visit your domain:</p>
+<div class="highlight"><pre><span></span><code>https://crm.hostweblankan.in
+</code></pre></div>
+<p>Since Cloudflare handles SSL/TLS, your Nginx only listens on port 80, and Cloudflare manages the secure HTTPS connection to clients.</p>
+<h2 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>Client (HTTPS) 
+    ↓
+Cloudflare (SSL Termination)
+    ↓
+Your Server (HTTP port 80)
+    ↓
+Nginx (Reverse Proxy)
+    ↓
+Backend Application (Port 8000)
+</code></pre></div>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="check-nginx-status">Check Nginx Status<a class="headerlink" href="#check-nginx-status" title="Permanent link">&para;</a></h3>
+<p>View the current status of Nginx:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>nginx
+</code></pre></div>
+<p><strong>Expected Output:</strong>
+<div class="highlight"><pre><span></span><code>● nginx.service - A high performance web server and a reverse proxy server
+   Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+   Active: active (running) since ...
+</code></pre></div></p>
+<h3 id="check-logs-for-errors">Check Logs for Errors<a class="headerlink" href="#check-logs-for-errors" title="Permanent link">&para;</a></h3>
+<p>View system and Nginx error logs:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># View system journal (last 50 lines)</span>
+sudo<span class="w"> </span>journalctl<span class="w"> </span>-xe
+
+<span class="c1"># Real-time Nginx error log</span>
+sudo<span class="w"> </span>tail<span class="w"> </span>-f<span class="w"> </span>/var/log/nginx/error.log
+</code></pre></div>
+<h3 id="check-if-nginx-is-listening-on-port-80">Check if Nginx is Listening on Port 80<a class="headerlink" href="#check-if-nginx-is-listening-on-port-80" title="Permanent link">&para;</a></h3>
+<p>Verify Nginx is bound to port 80:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>netstat<span class="w"> </span>-tulnp<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>nginx
+</code></pre></div>
+<p><strong>Expected Output:</strong>
+<div class="highlight"><pre><span></span><code>tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1234/nginx: master
+tcp6       0      0 :::80                   :::*                    LISTEN      1234/nginx: master
+</code></pre></div></p>
+<h3 id="common-issues">Common Issues<a class="headerlink" href="#common-issues" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Port 80 already in use</strong></td>
+<td><code>sudo lsof -i :80</code> to find process; stop it or change Nginx port</td>
+</tr>
+<tr>
+<td><strong>DNS not resolving</strong></td>
+<td>Verify orange cloud is enabled in Cloudflare DNS settings</td>
+</tr>
+<tr>
+<td><strong>502 Bad Gateway</strong></td>
+<td>Check backend service on port 8000 is running; verify proxy_pass URL</td>
+</tr>
+<tr>
+<td><strong>SSL certificate errors</strong></td>
+<td>Ensure Cloudflare SSL mode is set to "Full" or "Flexible"</td>
+</tr>
+<tr>
+<td><strong>Permission denied errors</strong></td>
+<td>Ensure commands run with <code>sudo</code>; verify file permissions</td>
+</tr>
+</tbody>
+</table>
+<h2 id="security-best-practices">Security Best Practices<a class="headerlink" href="#security-best-practices" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Firewall Rules</strong>: Only allow Cloudflare IPs to connect to your server
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>from<span class="w"> </span><span class="m">173</span>.245.48.0/20<span class="w"> </span>to<span class="w"> </span>any<span class="w"> </span>port<span class="w"> </span><span class="m">80</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span>from<span class="w"> </span><span class="m">103</span>.21.244.0/22<span class="w"> </span>to<span class="w"> </span>any<span class="w"> </span>port<span class="w"> </span><span class="m">80</span>
+<span class="c1"># (Add all Cloudflare IP ranges)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Hide Backend IP</strong>: Cloudflare proxying naturally hides your origin server IP</p>
+</li>
+<li>
+<p><strong>Rate Limiting</strong>: Enable Cloudflare's built-in rate limiting in dashboard</p>
+</li>
+<li>
+<p><strong>Monitor Logs</strong>: Regularly check <code>/var/log/nginx/access.log</code> for suspicious patterns</p>
+</li>
+<li>
+<p><strong>Keep Nginx Updated</strong>: Regularly update Nginx to latest stable version
+   <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>nginx
+</code></pre></div></p>
+</li>
+</ol>
+<h2 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://developers.cloudflare.com/ssl/">Cloudflare SSL/TLS Documentation</a></li>
+<li><a href="https://nginx.org/en/docs/http/ngx_http_proxy_module.html">Nginx Reverse Proxy Documentation</a></li>
+<li><a href="https://www.cloudflare.com/ips/">Cloudflare IP Ranges</a></li>
+</ul>
 
 
 

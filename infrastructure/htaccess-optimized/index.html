@@ -13,6 +13,10 @@
       
       
       
+        <link rel="prev" href="../nginx-letsencrypt/">
+      
+      
+        <link rel="next" href="../cloud-platform/">
       
       
         
@@ -23,7 +27,7 @@
     
     
       
-        <title>ELK Stack - Web Lankan Docs</title>
+        <title>Optimized .htaccess (Apache) - Web Lankan Docs</title>
       
     
     
@@ -74,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#elk-stack" class="md-skip">
+        <a href="#optimized-htaccess-configuration" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ELK Stack
+              Optimized .htaccess (Apache)
             
           </span>
         </div>
@@ -228,11 +232,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../infrastructure/nginx-cloudflare/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../nginx-cloudflare/" class="md-tabs__link">
           
   
   
@@ -252,7 +258,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../infrastructure/cloud-platform/" class="md-tabs__link">
+        <a href="../cloud-platform/" class="md-tabs__link">
           
   
   
@@ -272,7 +278,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../github-actions/" class="md-tabs__link">
+        <a href="../../tools/github-actions/" class="md-tabs__link">
           
   
   
@@ -497,26 +503,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -534,7 +545,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -552,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infrastructure/nginx-cloudflare/" class="md-nav__link">
+      <a href="../nginx-cloudflare/" class="md-nav__link">
         
   
   
@@ -580,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infrastructure/nginx-letsencrypt/" class="md-nav__link">
+      <a href="../nginx-letsencrypt/" class="md-nav__link">
         
   
   
@@ -605,10 +616,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../infrastructure/htaccess-optimized/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optimized .htaccess (Apache)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -624,6 +662,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#full-htaccess-copy-paste-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full .htaccess (copy-paste ready)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -695,7 +775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infrastructure/cloud-platform/" class="md-nav__link">
+      <a href="../cloud-platform/" class="md-nav__link">
         
   
   
@@ -723,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infrastructure/storage/" class="md-nav__link">
+      <a href="../storage/" class="md-nav__link">
         
   
   
@@ -751,7 +831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infrastructure/databases/" class="md-nav__link">
+      <a href="../databases/" class="md-nav__link">
         
   
   
@@ -779,7 +859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../infrastructure/network/" class="md-nav__link">
+      <a href="../network/" class="md-nav__link">
         
   
   
@@ -866,7 +946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../github-actions/" class="md-nav__link">
+      <a href="../../tools/github-actions/" class="md-nav__link">
         
   
   
@@ -894,7 +974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../github-actions/" class="md-nav__link">
+      <a href="../../tools/github-actions/" class="md-nav__link">
         
   
   
@@ -1146,7 +1226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/" class="md-nav__link">
+      <a href="../../tools/docker/" class="md-nav__link">
         
   
   
@@ -1174,7 +1254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kubernetes/" class="md-nav__link">
+      <a href="../../tools/kubernetes/" class="md-nav__link">
         
   
   
@@ -1202,7 +1282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../terraform/" class="md-nav__link">
+      <a href="../../tools/terraform/" class="md-nav__link">
         
   
   
@@ -1230,7 +1310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ansible/" class="md-nav__link">
+      <a href="../../tools/ansible/" class="md-nav__link">
         
   
   
@@ -1258,7 +1338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../jenkins/" class="md-nav__link">
+      <a href="../../tools/jenkins/" class="md-nav__link">
         
   
   
@@ -1321,10 +1401,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#full-htaccess-copy-paste-ready" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
+        Full .htaccess (copy-paste ready)
       
     </span>
   </a>
@@ -1332,204 +1412,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#components" class="md-nav__link">
+  <a href="#usage-notes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Components
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Components">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#elasticsearch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Elasticsearch
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#logstash" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Logstash
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#kibana" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Kibana
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Architecture
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logstash-pipeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Logstash Pipeline
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#index-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Index Management
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Index Management">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#index-naming" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Index Naming
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#index-lifecycle" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Index Lifecycle
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kibana-dashboards" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Kibana Dashboards
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Kibana Dashboards">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#application-monitoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Application Monitoring
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#system-monitoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        System Monitoring
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#security-monitoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Security Monitoring
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-queries" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Common Queries
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#performance-tuning" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Performance Tuning
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#alerting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Alerting
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Best Practices
+        Usage notes
       
     </span>
   </a>
@@ -1553,131 +1439,69 @@
 
 
 
-<h1 id="elk-stack">ELK Stack<a class="headerlink" href="#elk-stack" title="Permanent link">&para;</a></h1>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>ELK Stack (Elasticsearch, Logstash, Kibana) is a comprehensive logging and analytics platform.</p>
-<h2 id="components">Components<a class="headerlink" href="#components" title="Permanent link">&para;</a></h2>
-<h3 id="elasticsearch">Elasticsearch<a class="headerlink" href="#elasticsearch" title="Permanent link">&para;</a></h3>
-<p>Distributed search and analytics engine:
-- Full-text search
-- Near real-time analysis
-- Scalable to petabytes
-- RESTful API</p>
-<h3 id="logstash">Logstash<a class="headerlink" href="#logstash" title="Permanent link">&para;</a></h3>
-<p>Data processing pipeline:
-- Collect from multiple sources
-- Parse and structure data
-- Enrich with context
-- Ship to Elasticsearch</p>
-<h3 id="kibana">Kibana<a class="headerlink" href="#kibana" title="Permanent link">&para;</a></h3>
-<p>Data visualization platform:
-- Dashboards
-- Searches
-- Graphs and charts
-- Alerting</p>
-<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>Data Sources
-    ↓
-Logstash (Collection &amp; Processing)
-    ↓
-Elasticsearch (Storage &amp; Indexing)
-    ↓
-Kibana (Visualization)
-</code></pre></div>
-<h2 id="logstash-pipeline">Logstash Pipeline<a class="headerlink" href="#logstash-pipeline" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>input {
-  syslog {
-    port =&gt; 514
-  }
-}
+<h1 id="optimized-htaccess-configuration">Optimized .htaccess Configuration<a class="headerlink" href="#optimized-htaccess-configuration" title="Permanent link">&para;</a></h1>
+<p>Replace <code>yourdomain.com</code> with your actual domain before using.</p>
+<h2 id="full-htaccess-copy-paste-ready">Full .htaccess (copy-paste ready)<a class="headerlink" href="#full-htaccess-copy-paste-ready" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="c"># WordPress Rules</span>
+<span class="nt">&lt;IfModule</span><span class="w"> </span><span class="s">mod_rewrite.c</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nb">RewriteEngine</span><span class="w"> </span><span class="k">On</span>
+<span class="w">    </span><span class="nb">RewriteBase</span><span class="w"> </span>/
+<span class="w">    </span><span class="nb">RewriteRule</span><span class="w"> </span>^index\.php$<span class="w"> </span>-<span class="w"> </span>[L]
+<span class="w">    </span><span class="nb">RewriteCond</span><span class="w"> </span>%{REQUEST_FILENAME}<span class="w"> </span>!-f
+<span class="w">    </span><span class="nb">RewriteCond</span><span class="w"> </span>%{REQUEST_FILENAME}<span class="w"> </span>!-d
+<span class="w">    </span><span class="nb">RewriteRule</span><span class="w"> </span>.<span class="w"> </span><span class="sx">/index.php</span><span class="w"> </span>[L]
+<span class="nt">&lt;/IfModule&gt;</span>
 
-filter {
-  grok {
-    match =&gt; { &quot;message&quot; =&gt; &quot;%{SYSLOGLINE}&quot; }
-  }
-  date {
-    match =&gt; [ &quot;timestamp&quot;, &quot;MMM  d HH:mm:ss&quot;, &quot;MMM dd HH:mm:ss&quot; ]
-  }
-}
+<span class="c"># Enable Gzip Compression (Improves Speed)</span>
+<span class="nt">&lt;IfModule</span><span class="w"> </span><span class="s">mod_deflate.c</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nb">AddOutputFilterByType</span><span class="w"> </span>DEFLATE<span class="w"> </span>text/plain<span class="w"> </span>text/html<span class="w"> </span>text/xml<span class="w"> </span>text/css<span class="w"> </span>application/javascript<span class="w"> </span>application/json
+<span class="nt">&lt;/IfModule&gt;</span>
 
-output {
-  elasticsearch {
-    hosts =&gt; [&quot;localhost:9200&quot;]
-    index =&gt; &quot;syslog-%{+YYYY.MM.dd}&quot;
-  }
-}
-</code></pre></div>
-<h2 id="index-management">Index Management<a class="headerlink" href="#index-management" title="Permanent link">&para;</a></h2>
-<h3 id="index-naming">Index Naming<a class="headerlink" href="#index-naming" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>logstash-app-2025.12.09
-logstash-app-2025.12.10
-logstash-app-2025.12.11
-</code></pre></div>
-<h3 id="index-lifecycle">Index Lifecycle<a class="headerlink" href="#index-lifecycle" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>Hot → Warm → Cold → Delete
+<span class="c"># Enable Browser Caching (Improves Performance)</span>
+<span class="nt">&lt;IfModule</span><span class="w"> </span><span class="s">mod_expires.c</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nb">ExpiresActive</span><span class="w"> </span><span class="k">On</span>
+<span class="w">    </span><span class="nb">ExpiresByType</span><span class="w"> </span>image/jpg<span class="w"> </span><span class="s2">&quot;access plus 1 year&quot;</span>
+<span class="w">    </span><span class="nb">ExpiresByType</span><span class="w"> </span>image/jpeg<span class="w"> </span><span class="s2">&quot;access plus 1 year&quot;</span>
+<span class="w">    </span><span class="nb">ExpiresByType</span><span class="w"> </span>image/gif<span class="w"> </span><span class="s2">&quot;access plus 1 year&quot;</span>
+<span class="w">    </span><span class="nb">ExpiresByType</span><span class="w"> </span>image/png<span class="w"> </span><span class="s2">&quot;access plus 1 year&quot;</span>
+<span class="w">    </span><span class="nb">ExpiresByType</span><span class="w"> </span>text/css<span class="w"> </span><span class="s2">&quot;access plus 1 month&quot;</span>
+<span class="w">    </span><span class="nb">ExpiresByType</span><span class="w"> </span>text/x-javascript<span class="w"> </span><span class="s2">&quot;access plus 1 month&quot;</span>
+<span class="w">    </span><span class="nb">ExpiresByType</span><span class="w"> </span>application/javascript<span class="w"> </span><span class="s2">&quot;access plus 1 month&quot;</span>
+<span class="w">    </span><span class="nb">ExpiresByType</span><span class="w"> </span>application/pdf<span class="w"> </span><span class="s2">&quot;access plus 1 month&quot;</span>
+<span class="w">    </span><span class="nb">ExpiresByType</span><span class="w"> </span>application/x-shockwave-flash<span class="w"> </span><span class="s2">&quot;access plus 1 month&quot;</span>
+<span class="w">    </span><span class="nb">ExpiresByType</span><span class="w"> </span>image/x-icon<span class="w"> </span><span class="s2">&quot;access plus 1 year&quot;</span>
+<span class="w">    </span><span class="nb">ExpiresDefault</span><span class="w"> </span><span class="s2">&quot;access plus 2 days&quot;</span>
+<span class="nt">&lt;/IfModule&gt;</span>
 
-- Hot: 1 day, fully searchable
-- Warm: 30 days, slow storage
-- Cold: 90 days, archived
-- Delete: After retention period
+<span class="c"># Block Hotlinking (Prevents Image Theft)</span>
+<span class="nt">&lt;IfModule</span><span class="w"> </span><span class="s">mod_rewrite.c</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nb">RewriteEngine</span><span class="w"> </span><span class="k">on</span>
+<span class="w">    </span><span class="nb">RewriteCond</span><span class="w"> </span>%{HTTP_REFERER}<span class="w"> </span>!^$
+<span class="w">    </span><span class="nb">RewriteCond</span><span class="w"> </span>%{HTTP_REFERER}<span class="w"> </span>!^http(s)?://(www\.)?yourdomain.com<span class="w"> </span>[NC]
+<span class="w">    </span><span class="nb">RewriteRule</span><span class="w"> </span>\.(jpg|jpeg|png|gif)$<span class="w"> </span>-<span class="w"> </span>[NC,F,L]
+<span class="nt">&lt;/IfModule&gt;</span>
+
+<span class="c"># Enable Keep-Alive (Reduces Server Overhead)</span>
+<span class="nt">&lt;IfModule</span><span class="w"> </span><span class="s">mod_headers.c</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nb">Header</span><span class="w"> </span>set<span class="w"> </span>Connection<span class="w"> </span>keep-alive
+<span class="nt">&lt;/IfModule&gt;</span>
+
+<span class="c"># Disable Directory Browsing (Security)</span>
+<span class="nb">Options</span><span class="w"> </span>-Indexes
+
+<span class="c"># Protect wp-config.php (WordPress Security)</span>
+<span class="nt">&lt;Files</span><span class="w"> </span><span class="s">wp-config.php</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nb">order</span><span class="w"> </span>allow,deny
+<span class="w">    </span><span class="nb">deny</span><span class="w"> </span>from<span class="w"> </span><span class="k">all</span>
+<span class="nt">&lt;/Files&gt;</span>
 </code></pre></div>
-<h2 id="kibana-dashboards">Kibana Dashboards<a class="headerlink" href="#kibana-dashboards" title="Permanent link">&para;</a></h2>
-<h3 id="application-monitoring">Application Monitoring<a class="headerlink" href="#application-monitoring" title="Permanent link">&para;</a></h3>
+<h2 id="usage-notes">Usage notes<a class="headerlink" href="#usage-notes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Request rate over time</li>
-<li>Error rate by endpoint</li>
-<li>Response time distribution</li>
-<li>Top slow queries</li>
+<li>Place this in your site root <code>.htaccess</code> (Apache). Not used by Nginx.</li>
+<li>Adjust caching durations to match your release cadence.</li>
+<li>After edits, test with <code>apachectl configtest</code> (or <code>apache2ctl</code>) and reload Apache.</li>
+<li>For mixed HTTP/HTTPS sites, ensure rewrites and canonical host rules are handled elsewhere if needed.</li>
 </ul>
-<h3 id="system-monitoring">System Monitoring<a class="headerlink" href="#system-monitoring" title="Permanent link">&para;</a></h3>
-<ul>
-<li>CPU usage</li>
-<li>Memory consumption</li>
-<li>Disk I/O</li>
-<li>Network throughput</li>
-</ul>
-<h3 id="security-monitoring">Security Monitoring<a class="headerlink" href="#security-monitoring" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Authentication failures</li>
-<li>Unusual access patterns</li>
-<li>Configuration changes</li>
-<li>Security events</li>
-</ul>
-<h2 id="common-queries">Common Queries<a class="headerlink" href="#common-queries" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code># Count errors in last hour
-level:ERROR AND timestamp:[now-1h TO now]
-
-# Average response time by endpoint
-endpoint:* | stats avg(response_time) by endpoint
-
-# Most frequent error messages
-level:ERROR | stats count by message | sort count desc
-</code></pre></div>
-<h2 id="performance-tuning">Performance Tuning<a class="headerlink" href="#performance-tuning" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Shard size</strong> - Optimal ~30-50GB</li>
-<li><strong>Refresh interval</strong> - 30s default</li>
-<li><strong>Merge policy</strong> - Balance indexing vs search</li>
-<li><strong>Heap allocation</strong> - 50% of available RAM</li>
-<li><strong>Circuit breaker</strong> - Prevent OOM</li>
-</ul>
-<h2 id="alerting">Alerting<a class="headerlink" href="#alerting" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>Configure alerts on:
-- High error rates
-- Slow response times
-- Low disk space
-- Service unavailability
-- Security events
-</code></pre></div>
-<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>Index rotation</strong> - Daily indices</li>
-<li><strong>Retention policy</strong> - Defined schedule</li>
-<li><strong>Field mapping</strong> - Consistent schema</li>
-<li><strong>Security</strong> - Encrypt at rest and transit</li>
-<li><strong>Monitoring</strong> - Monitor ELK itself</li>
-<li><strong>Capacity planning</strong> - Growth estimation</li>
-</ol>
 
 
 
